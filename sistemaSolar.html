@@ -77,7 +77,7 @@
         var lastRelCameraPositions=[null,null,null,null,null];
 
 
-        var speed=1;
+        var speed=0.1;
 
         var trail1,trail2,trail3;
 
@@ -452,9 +452,12 @@
 
             /*---- estacion-------*/
             m4=m6;
-            /*---- giro en torno a auxiliar 6-------*/
+            /*---- giro en torno a auxiliar 6 (rotar alrededor de tierra)-------*/
             mat4.rotate(m4,m4,Math.PI/0.01*tiempo,vec3.fromValues(0,0,1));
-            mat4.translate(m4,m4,[10,0,0]);   
+            mat4.translate(m4,m4,[10,0,0]);
+            /*---- para acomodarle los paneles-------*/
+            mat4.rotate(m4,m4,Math.PI/2,vec3.fromValues(0,1,0));
+            mat4.rotate(m4,m4,Math.PI/4,vec3.fromValues(-1,0,0));
             setTransform(iss,m4);  
 
 
