@@ -11,6 +11,8 @@ Explique breve y concretamente qué es f:
 
 f es un puntero a un puntero de funcion que recibe un puntero a short int y un array de 2 punteros a char, y devuelve un puntero a int.
 
+</details>
+
 ## Ejercicio 2
 
 Explique qué es cada uno de los siguientes, haciendo referencia a su inicialización, su comportamiento y el area de memoria donde residen: a) Una variable global static b) Una variable local static c) Un atributo de clase static.
